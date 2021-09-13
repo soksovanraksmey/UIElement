@@ -48,9 +48,12 @@ class MainViewController: UIViewController ,UISearchResultsUpdating{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController?.isNavigationBarHidden = false
-        self.navigationItem.hidesBackButton = true
+        self.navigationController?.isNavigationBarHidden = false
+        
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        navigationItem.rightBarButtonItem?.tintColor = .black
+        
         utils = StorybaordUtils.init(storyboard: self.storyboard)
         
         tblView.delegate = self
@@ -78,8 +81,9 @@ class MainViewController: UIViewController ,UISearchResultsUpdating{
             print("Title Lesson = \(resultSearch)")
             
         }
-        
-        
+        self.navigationItem.backBarButtonItem?.tintColor = .black
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"")
     }
     
 }// viewController
@@ -127,6 +131,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         //
         let vc = utils.getViewController(by: identifier)
         navigationController?.pushViewController(vc!, animated: true)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ")
+        self.navigationItem.backBarButtonItem?.tintColor = .black
         
     }
     

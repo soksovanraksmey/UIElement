@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5205704F26EDC12800FABA5E /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5205704E26EDC12800FABA5E /* MenuController.swift */; };
 		5258259126E5B49A00F78061 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258259026E5B49A00F78061 /* PhotoCollectionViewCell.swift */; };
 		5258259326E5B6D100F78061 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258259226E5B6D100F78061 /* HeaderCollectionReusableView.swift */; };
 		5258259826E72A0A00F78061 /* StoryboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258259726E72A0A00F78061 /* StoryboardUtils.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5205704E26EDC12800FABA5E /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		5258259026E5B49A00F78061 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		5258259226E5B6D100F78061 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		5258259726E72A0A00F78061 /* StoryboardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardUtils.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5205704D26EDC0E900FABA5E /* MenuList */ = {
+			isa = PBXGroup;
+			children = (
+				5205704E26EDC12800FABA5E /* MenuController.swift */,
+			);
+			path = MenuList;
+			sourceTree = "<group>";
+		};
 		5258258F26E5B40400F78061 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		52C913A126E1D61C004E238E /* UIElement */ = {
 			isa = PBXGroup;
 			children = (
+				5205704D26EDC0E900FABA5E /* MenuList */,
 				529A4BF426E9FAAB0048316D /* loginController */,
 				5258259626E729EA00F78061 /* Utils */,
 				52C913BA26E1D736004E238E /* UiElement */,
@@ -259,6 +270,7 @@
 				52C913A526E1D61C004E238E /* SceneDelegate.swift in Sources */,
 				52C913D226E1D83B004E238E /* UiNavigationController.swift in Sources */,
 				52C913CA26E1D7FA004E238E /* UiSegmented.swift in Sources */,
+				5205704F26EDC12800FABA5E /* MenuController.swift in Sources */,
 				52C913CE26E1D819004E238E /* UiScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
