@@ -40,29 +40,49 @@ class MenuController: UIViewController{
         shadowForViewCorner(viewName: view4)
         shadowForViewCorner(viewName: view5)
         shadowForViewCorner(viewName: view6)
-        tapOnView(viewName: view1)
-        tapOnView(viewName: view2)
-        tapOnView(viewName: view3)
-        tapOnView(viewName: view4)
-        tapOnView(viewName: view5)
-        tapOnView(viewName: view6)
-      
+   
+       tapOnView1(viewName: view1)
+        tapOnView2(viewName: view2)
+        tapOnView3(viewName: view4)
     
         
     }
+    private func tapOnView1(viewName: UIView){
+          let tapView = UITapGestureRecognizer()
+          viewName.addGestureRecognizer(tapView)
+        tapView.addTarget(self, action: #selector(tapAction))
+      
+    }
+    
     // Add tapAction on View with UITapGestureReconizer()
- private func tapOnView(viewName: UIView){
+    private func tapOnView2(viewName: UIView){
        let tapView = UITapGestureRecognizer()
        viewName.addGestureRecognizer(tapView)
-       tapView.addTarget(self, action: #selector(tapAction))
+       tapView.addTarget(self, action: #selector(tapAction2))
+      
+   }
+    private func tapOnView3(viewName: UIView){
+       let tapView = UITapGestureRecognizer()
+       viewName.addGestureRecognizer(tapView)
+       tapView.addTarget(self, action: #selector(tapAction3))
       
    }
     @objc func tapAction() {
-         let vc = storyboard?.instantiateViewController(withIdentifier: "listMenu") as! MainViewController
-         self.navigationController?.pushViewController(vc, animated: true)
-         
+        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "listMenu")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func tapAction2() {
+        let vc = UIStoryboard(name: "Profile", bundle: Bundle.main).instantiateViewController(identifier: "profile")
+        navigationController?.pushViewController(vc, animated: true)
+
      }
-   
+    @objc func tapAction3() {
+        let vc = UIStoryboard(name: "InfoApp", bundle: Bundle.main).instantiateViewController(identifier: "infoApp")
+        navigationController?.pushViewController(vc, animated: true)
+
+     }
+
     private func shadowForViewCorner(viewName: UIView){
         viewName.layer.cornerRadius = 20
         viewName.layer.shadowOffset = CGSize(width: 10,

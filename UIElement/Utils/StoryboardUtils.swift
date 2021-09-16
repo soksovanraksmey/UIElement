@@ -20,5 +20,11 @@ class StorybaordUtils {
         return vc
     }
     
+    // Push with storyboard Name and id
+    func getViewController(by storyboardName: String,by Id:String) -> UIViewController {
+        let vc = UIStoryboard(name: storyboardName, bundle: Bundle.main).instantiateViewController(withIdentifier: Id)
+        
+        return vc
+    }
     
 }
